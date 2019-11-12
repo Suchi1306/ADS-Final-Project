@@ -1,0 +1,66 @@
+Why not AWS? 
+GPU Training and instances we found were expensive with ~$1.5 per hour. The model takes 10 hours to run. We would to run it Many times to understand how it works - very expensive 
+Therefore using free google cola that provides GPU. 
+
+What is GPU?
+From what we found so far, Like CPU, is a processor. GPU is a graphic card. Earlier it was used for gaming and graphics. Then it was found that it very much faster for matrix multiplications that are a part of Neural Nets. Therefore you can train models on a GPU much faster compared to a CPU. If it takes 10 hours to run the model, then on CPU I can imaging it would take around 4-5 days. 
+
+What is ULMFIT?
+When we were looking for research papers, we came across ULMFIT by Jeremy Howard that involves training a LSTM(type of Neural Net) model to predict sentiment in IMDB movie reviews. At the time, it was State of Art with an overall accuracy of around 94%. 
+This model was a breakthrough moment. 
+
+How are you writing code? 
+We came across fast.ai which is a startup/research lab owned by Jeremy Howard, author of this paper. He co authored along with Sebastian Ruder who is another NLP researcher from Ireland. Jeremy also provides open source (anyone in public can use and see code without any money and contribute to the library by adding new features or updating old features) fastai library. We will be using this library to replicate code in the research paper. 
+
+Why the library why not by yourself? 
+We would have to learn PyTorch, deep Python understanding and it would take a lot of time to get our heads around deep learning. Therefore, this library is a good starting point and slowly we can build on top of it and try to replicate code in PyTorch (from what we understand is very difficult, even for experienced data scientists with many years of experience). 
+
+What outcome do you expect? 
+To first run this model on IMDB sentiment review analysis - then test the model by typing in our own reviews - both negative’ and positive, and check if model works well for our own reviews. (Testing model). 
+
+
+What is idea of ULMFIT? 
+From what we understand, it trains first to learn English which we think is called a Language Model. This basically being able to predict the next words in a sentence. 
+First model learns English from WikiPidea. 
+Then model learns English from IMDB dataset. It tries to predict next words in IMDB reviews. 
+
+Finally, the model trains and learns the sentiment in the reviews - Supervised Learning. (Model knows which reviews are neg/pos and it learns words/patters that lead to negative or positive reviews and understands sentiment)
+
+Finally, it can be used to classify sentiment. 
+
+Why Deep Learning and not traditional methods like Logistic Regression/SVM?
+From what we understand, in the recent years Deep Learning has proven to give excellent and SOTA results in NLP and image domain. It has really become the go to solution. 
+This way - we do not need to do remove stop words (a, an, the), stemming, lemmatisation (processes to convert words to root word) 
+Remove tenses. Playing > play, sitting > sit
+
+In Deep Learning we don’t think that we need to worry about all this data cleaning and model itself learns.
+
+Also, this model and Google’s latest Deep Learning model BERT (which came after ULMFIT) have SOTA results. 
+
+What do you know about NLP and Deep Learning?
+Deep Learning is still an active field of research in NLP with new research papers and techniques coming out almost every month. Example - Google’s BERT, ROBERTA fb
+We know that NLP Deep Learning is still under development and is not as sophisticated as Computer Vision DL applications - such as Facial Recognition, Self Driving Cars etc 
+
+How many datasets in Paper? 
+In the paper, Sebastian Ruder had applied this ULMFIT model to 6 different NLP domains - question answer, sentiment analysis, document classification etc. For simplicity, to start with we will use it for sentimental analysis only. 
+
+What is your custom dataset later?
+We wish to use it for YELP. Even though in model, it shows that it works for YELP - there is no mention of code in fastai for YELP. Therefore, this will be our own project. Amazon Movie reviews. 
+Also ask Mark if you need to create new data - if so, creating for reviews would be difficult? So can you just apply to new existing dataset?
+
+What are Embeddings? 
+From what we understand, each word in Neural Network space becomes a vector of numbers. These are called word embeddings. 
+
+The prevailing approach is to pretrain embeddings that capture additional context via other tasks. Embeddings at different levels are then used as features, concatenated either with the word embeddings or with the inputs
+at intermediate layers. This method is known as hypercolumns
+
+What are bigrams/trigrams? 
+Traditional methods of learning, words in pairs of 2 called bigrams, words in pairs called trigrams. 
+DL - no longer. 
+1 word - unigram 
+
+What is precision and recall?
+ Metrics to check classification accuracy based on how many wrong/right.
+
+The idea is first the language model understands the language English which they have achieved by training the model on Wikipedia. Then the model is trained on domain-specific text, in this case this is the whole IMDb dataset.
+
