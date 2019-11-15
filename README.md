@@ -1,2 +1,4 @@
 # ADS-Final-Project
-Group S 
+ULMFiT for Text Classification
+Group S
+
