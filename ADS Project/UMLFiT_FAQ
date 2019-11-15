@@ -63,4 +63,3 @@ What is precision and recall?
  Metrics to check classification accuracy based on how many wrong/right.
 
 The idea is first the language model understands the language English which they have achieved by training the model on Wikipedia. Then the model is trained on domain-specific text, in this case this is the whole IMDb dataset.
-
